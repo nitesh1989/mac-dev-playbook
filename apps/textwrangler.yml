@@ -10,7 +10,7 @@
     install_method: dmg
     mount_path: /Volumes/{{app_name}}\ 4.5.9/
     downloads: ~/.ansible-downloads/
-    creates: /Applications/{{app_name}}/
+    creates: /Applications/{{app_name}}.app/
 
   tasks:
     - include: ../install/{{install_method}}.yml
