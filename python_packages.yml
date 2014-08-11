@@ -1,0 +1,19 @@
+---
+- hosts: all
+  connection: local
+  sudo: True
+  tasks:
+    - pip: name=cython
+    - pip: name=numpy
+    - pip: name=scipy
+    - pip: name=matplotlib
+    - pip: name=ipython
+    - pip: name=sympy
+    - pip: name=pandas
+    - pip: name=pyx
+    - pip: name=pymc
+    - pip: name=simpy
+    - pip: name=scikit-image
+    - pip: name=scikit-learn
+    - pip: name=statsmodels
+

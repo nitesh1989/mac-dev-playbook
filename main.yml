@@ -2,7 +2,6 @@
 - name: CMDB Mac Setup Playbook
   hosts: localhost
   connection: local
-  gather_facts: False
 
   vars:
     - downloads: ~/.ansible-downloads/
@@ -19,3 +18,5 @@
 - include: mac_apps.yml
 
 - include: homebrew_packages.yml
+
+- include: python_packages.yml
