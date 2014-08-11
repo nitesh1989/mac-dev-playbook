@@ -1,0 +1,8 @@
+---
+
+- include: apps/dropbox.yml
+- include: apps/firefox.yml
+- include: apps/flash_player.yml
+- include: apps/java7.yml
+- include: apps/sublime2.yml
+- include: apps/textwrangler.yml

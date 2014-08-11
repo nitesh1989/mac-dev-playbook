@@ -1,5 +1,5 @@
 ---
-- name: Mac Development Playbook
+- name: CMDB Mac Setup Playbook
   hosts: localhost
   connection: local
   gather_facts: False
@@ -10,19 +10,12 @@
   tasks:
     - name: Create Ansible downloads directory
       file: path={{downloads}} state=directory
-    - include: preferences/softwareupdate.yml
-    - include: preferences/dotfiles.yml
-    - include: preferences/preferences.yml
+    # - include: preferences/softwareupdate.yml
+    # - include: preferences/dotfiles.yml
+    # - include: preferences/preferences.yml
 
-- include: apps/adium.yml
-- include: apps/dropbox.yml
-- include: apps/firefox.yml
-- include: apps/flash_player.yml
-- include: apps/java7.yml
 - include: apps/homebrew.yml
-- include: apps/skype.yml
-- include: apps/sublime2.yml
-- include: apps/tresorit.yml
-- include: apps/vagrant.yml
-- include: apps/virtualbox.yml
-- include: apps/vlc.yml
+
+- include: mac_apps.yml
+
+- include: homebrew_packages.yml

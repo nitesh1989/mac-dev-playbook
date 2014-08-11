@@ -1,0 +1,39 @@
+---
+- hosts: all
+  connection: local
+  tasks:
+    - homebrew_tap: name=homebrew/science
+
+    - homebrew_tap: name=caskroom/cask
+    - homebrew: name=brew-cask
+
+    # Blast won't build with gcc-4.9 OR clang, lovely
+    - shell: brew install homebrew/versions/gcc48 creates=/usr/local/bin/gcc-4.8
+
+    - homebrew: name=git
+
+    - homebrew: name=blast
+    - homebrew: name=samtools
+    - homebrew: name=bamtools
+    - homebrew: name=bedtools
+    - homebrew: name=bedops
+    - homebrew: name=bcftools
+    - homebrew: name=vcftools
+    - homebrew: name=htslib
+    - homebrew: name=bwa
+    - homebrew: name=bowtie
+    - homebrew: name=bowtie2
+    - homebrew: name=tophat
+    - homebrew: name=cufflinks
+    - homebrew: name=mummer
+    - homebrew: name=clustal-w
+    - homebrew: name=clustal-omega
+    - homebrew: name=fasta
+    - homebrew: name=fastqc
+    - homebrew: name=hmmer
+    - homebrew: name=igv
+    - homebrew: name=igvtools
+    - homebrew: name=meme
+    - homebrew: name=quast
+    - homebrew: name=lastz
+
