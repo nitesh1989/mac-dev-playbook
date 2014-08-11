@@ -6,3 +6,4 @@
 - include: apps/java7.yml
 - include: apps/sublime2.yml
 - include: apps/textwrangler.yml
+- include: apps/mactex.yml
