@@ -8,3 +8,6 @@
 - include: apps/textmate.yml
 - include: apps/textwrangler.yml
 - include: apps/mactex.yml
+- include: apps/r.yml
+- include: apps/rstudio.yml
+

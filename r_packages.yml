@@ -1,0 +1,18 @@
+---
+- hosts: all
+  connection: local
+  tasks:
+  
+  - name: Install R packages
+    shell: echo "install.packages(c('{{item}}'),repos='http://cran.stat.ucla.edu/')"| R --no-save --no-restore-history
+    with_items:
+      - ggplot2
+      - ggvis
+      - knitr
+      - plyr
+      - dplyr
+      - lubridate
+      - zoo
+      - forecast
+      - sqldf
+      - reshape2
