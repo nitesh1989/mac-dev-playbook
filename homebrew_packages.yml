@@ -11,15 +11,15 @@
         - caskroom/cask
         - caskroom/fonts
 
-    - name: Install 'brew cask' command
-      homebrew: name=brew-cask
+    - name: Install 'brew cask' command (and force brew update)
+      homebrew: name=brew-cask state=latest update_homebrew=yes
 
     # Blast won't build with gcc-4.9 OR clang, lovely. I don't want to tap homebrew/versions
     - name: Install GCC 4.8 from homebrew/versions
       shell: brew install homebrew/versions/gcc48 creates=/usr/local/bin/gcc-4.8
 
     - name: Install packages with homebrew
-      homebrew: name={{item}}
+      homebrew: name={{item}} state=latest 
       with_items:
         - git
         - wget
