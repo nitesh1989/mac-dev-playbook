@@ -18,6 +18,7 @@
         - simpy
         - scikit-image
         - scikit-learn
+        - macs2
 
     - pip: state=present name="PyX==0.12"
 
