@@ -2,48 +2,56 @@
 - hosts: all
   connection: local
   tasks:
-    - homebrew_tap: name=homebrew/science
-    - homebrew_tap: name=homebrew/python
 
-    - homebrew_tap: name=caskroom/cask
-    - homebrew_tap: name=caskroom/fonts
-    - homebrew: name=brew-cask
+    - name: Tap additional homebrew repositories we use
+      homebrew_tap: name={{item}}
+      with_items:
+        - homebrew/science
+        - homebrew/python
+        - caskroom/cask
+        - caskroom/fonts
 
-    # Blast won't build with gcc-4.9 OR clang, lovely
-    - shell: brew install homebrew/versions/gcc48 creates=/usr/local/bin/gcc-4.8
+    - name: Install 'brew cask' command
+      homebrew: name=brew-cask
 
-    - homebrew: name=git
-    - homebrew: name=wget
+    # Blast won't build with gcc-4.9 OR clang, lovely. I don't want to tap homebrew/versions
+    - name: Install GCC 4.8 from homebrew/versions
+      shell: brew install homebrew/versions/gcc48 creates=/usr/local/bin/gcc-4.8
+
+    - name: Install packages with homebrew
+      homebrew: name={{item}}
+      with_items:
+        - git
+        - wget
+        # From homebrew/python
+        - numpy
+        - scipy
+        - matplotlib
+        - pillow
+        # From homebrew/science
+        - blast
+        - samtools
+        - bamtools
+        - bedtools
+        - bedops
+        - bcftools
+        - vcftools
+        - htslib
+        - bwa
+        - bowtie
+        - bowtie2
+        - tophat
+        - cufflinks
+        - mummer
+        - clustal-w
+        - clustal-omega
+        - fasta
+        - fastqc
+        - hmmer
+        - igv
+        - igvtools
+        - meme
+        - quast
+        - lastz
 
     - homebrew_cask: name=font-dejavu-sans
-
-    - homebrew: name=numpy
-    - homebrew: name=scipy
-    - homebrew: name=matplotlib
-    - homebrew: name=pillow
-
-    - homebrew: name=blast
-    - homebrew: name=samtools
-    - homebrew: name=bamtools
-    - homebrew: name=bedtools
-    - homebrew: name=bedops
-    - homebrew: name=bcftools
-    - homebrew: name=vcftools
-    - homebrew: name=htslib
-    - homebrew: name=bwa
-    - homebrew: name=bowtie
-    - homebrew: name=bowtie2
-    - homebrew: name=tophat
-    - homebrew: name=cufflinks
-    - homebrew: name=mummer
-    - homebrew: name=clustal-w
-    - homebrew: name=clustal-omega
-    - homebrew: name=fasta
-    - homebrew: name=fastqc
-    - homebrew: name=hmmer
-    - homebrew: name=igv
-    - homebrew: name=igvtools
-    - homebrew: name=meme
-    - homebrew: name=quast
-    - homebrew: name=lastz
-
