@@ -3,17 +3,21 @@
   connection: local
   sudo: True
   tasks:
-    - pip: name=cython
-    - pip: name=numpy
-    - pip: name=scipy
-    - pip: name=matplotlib
-    - pip: name=ipython
-    - pip: name=sympy
-    - pip: name=pandas
-    - pip: name=pyx
-    - pip: name=pymc
-    - pip: name=simpy
-    - pip: name=scikit-image
-    - pip: name=scikit-learn
-    - pip: name=statsmodels
+    - name: Ensure latest versions of scientific python modules
+      pip: state=latest name={{item}}
+      environment:
+        PYTHONPATH: /usr/local/lib/python2.7/site-packages:/Library/Python/2.7/site-packages
+      with_items:
+        - patsy
+        - statsmodels
+        - cython
+        - ipython
+        - sympy
+        - pandas
+        - pymc
+        - simpy
+        - scikit-image
+        - scikit-learn
+
+    - pip: state=present name="PyX==0.12"
 
