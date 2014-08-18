@@ -9,7 +9,7 @@
     installer_type: app
     install_method: tar
     downloads: ~/.ansible-downloads/
-    creates: /usr/bin/subl
+    creates: /usr/bin/tm
 
   tasks:
     - include: ../install/{{install_method}}.yml
