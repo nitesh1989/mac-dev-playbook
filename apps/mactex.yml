@@ -10,7 +10,6 @@
     app_url: "http://mirror.ctan.org/systems/mac/mactex/MacTeX.pkg"
     install_method: pkg 
     install_target: /Volumes/Macintosh\ HD
-    mount_path: /Volumes/MacTex/
     downloads: ~/.ansible-downloads/
     creates: /usr/texbin/latex
 
