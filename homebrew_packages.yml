@@ -30,6 +30,7 @@
         - pillow
         # From homebrew/science
         - blast
+        - blat
         - samtools
         - bamtools
         - bedtools
@@ -53,5 +54,24 @@
         - meme
         - quast
         - lastz
+        - abyss
+        - igraph
+        - picard-tools
+        - trinity
+        - velvet
+        - ray
+        - augustus
+        - spades
+        - soapdenovo
+        - cegma
+        - glimmer3
+        - glimmerhmm
+        - gmap-gsnap
+        - blasr
+        - kraken
+        - plink
+        - quake
+        - snpeff
+        - hotspot
 
     - homebrew_cask: name=font-dejavu-sans
