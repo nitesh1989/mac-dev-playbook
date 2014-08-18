@@ -4,7 +4,9 @@
   tasks:
   
   - name: Install R packages
-    shell: echo "install.packages(c('{{item}}'),repos='http://cran.stat.ucla.edu/')"| R --no-save --no-restore-history
+    shell: echo "install.packages(c('{{item|quote}}'),repos='http://cran.stat.ucla.edu/')"| R --no-save --no-restore-history
+    args:
+      creates: /Library/Frameworks/R.framework/Versions/3.1/Resources/library/{{item}}
     with_items:
       - ggplot2
       - ggvis
