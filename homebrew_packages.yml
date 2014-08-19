@@ -21,13 +21,9 @@
     - name: Install packages with homebrew
       homebrew: name={{item}} state=latest 
       with_items:
+        - gcc 
         - git
         - wget
-        # From homebrew/python
-        - numpy
-        - scipy
-        - matplotlib
-        - pillow
         # From homebrew/science
         - blast
         - blat
@@ -73,5 +69,10 @@
         - quake
         - snpeff
         - hotspot
+        # From homebrew/python
+        - numpy
+        - scipy
+        - matplotlib
+        - pillow
 
     - homebrew_cask: name=font-dejavu-sans
