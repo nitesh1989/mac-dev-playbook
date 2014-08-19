@@ -2,6 +2,7 @@
 
 # This unfortunately pops up a GUI dialog and runs in the background ;(
 /usr/bin/xcode-select --install
+read -p "Complete the command line tools install and then press enter"
 
 # And this will force the xcode license agreement to come up
 xcodebuild
@@ -13,9 +14,8 @@ pip install paramiko PyYAML jinja2 httplib2
 pip install ansible
 
 # Get the playbook
-curl https://codeload.github.com/jxtx/mac-dev-playbook/zip/master > master.zip
-unzip master.zip
+git clone https://github.com/jxtx/mac-dev-playbook.git
 
 # Run the playbook
-cd mac-dev-playbook-master
+cd mac-dev-playbook
 ansible-playbook main.yml -i localhost, --ask-sudo-pass
