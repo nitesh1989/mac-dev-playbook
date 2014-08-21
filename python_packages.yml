@@ -20,5 +20,5 @@
         - statsmodels
         - macs2
 
-    - pip: state=present name="PyX==0.12"
+    # - pip: state=present name="PyX==0.12"
 
