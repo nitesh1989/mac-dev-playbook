@@ -1,17 +1,17 @@
 #!/bin/sh
 
 # This unfortunately pops up a GUI dialog and runs in the background ;(
-/usr/bin/xcode-select --install
+sudo /usr/bin/xcode-select --install
 read -p "Complete the command line tools install and then press enter"
 
 # And this will force the xcode license agreement to come up
-xcodebuild
+sudo xcodebuild
 
-easy_install pip
+sudo easy_install pip
 
 # Anisble doesn't seem to declare all its dependencies
-pip install paramiko PyYAML jinja2 httplib2
-pip install ansible
+sudo pip install paramiko PyYAML jinja2 httplib2
+sudo pip install ansible
 
 # Get the playbook
 git clone https://github.com/jxtx/mac-dev-playbook.git
