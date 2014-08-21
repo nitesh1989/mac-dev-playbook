@@ -8,8 +8,6 @@
       environment:
         PYTHONPATH: /usr/local/lib/python2.7/site-packages:/Library/Python/2.7/site-packages
       with_items:
-        - patsy
-        - statsmodels
         - cython
         - ipython
         - sympy
@@ -18,6 +16,8 @@
         - simpy
         - scikit-image
         - scikit-learn
+        - patsy
+        - statsmodels
         - macs2
 
     - pip: state=present name="PyX==0.12"
