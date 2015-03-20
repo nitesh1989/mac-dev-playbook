@@ -24,6 +24,9 @@
         - gcc 
         - git
         - wget
+        - mosh
+        - tmux
+        - ack
         # From homebrew/science
         - blast
         - blat
