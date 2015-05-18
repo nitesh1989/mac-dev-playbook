@@ -13,6 +13,13 @@
 
     - name: Install 'brew cask' command (and force brew update)
       homebrew: name=brew-cask state=latest update_homebrew=yes
+      
+    - name: Install cask dependencies (Java, Xquartz)
+      homebrew_cask: name={{item}}
+      with_items:
+        - Xquartz
+        - Java
+     
 
     # Blast won't build with gcc-4.9 OR clang, lovely. I don't want to tap homebrew/versions
     - name: Install GCC 4.8 from homebrew/versions
@@ -43,7 +50,7 @@
         - bowtie
         - bowtie2
         - tophat
-        - cufflinks
+        # - cufflinks
         - mummer
         - clustal-w
         - clustal-omega
@@ -65,7 +72,7 @@
         - spades
         - soapdenovo
         - cegma
-        - glimmer3
+        # - glimmer3
         - glimmerhmm
         - gmap-gsnap
         - blasr
