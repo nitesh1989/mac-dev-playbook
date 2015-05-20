@@ -5,9 +5,9 @@
   # sudo: True
 
   vars:
-    app_name: R
+    app_name: R-3.2.0
     app_name_pretty: R 
-    app_url: "http://cran.stat.ucla.edu/bin/macosx/R-3.1.1-mavericks.pkg"
+    app_url: "http://cran.stat.ucla.edu/bin/macosx/R-3.2.0.pkg"
     install_method: pkg 
     install_target: /Volumes/Macintosh\ HD
     downloads: ~/.ansible-downloads/
