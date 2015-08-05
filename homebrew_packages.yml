@@ -50,7 +50,7 @@
         - bowtie
         - bowtie2
         - tophat
-        # - cufflinks
+        - cufflinks
         - mummer
         - clustal-w
         - clustal-omega
