@@ -2,7 +2,7 @@
 
 - include: apps/dropbox.yml
 - include: apps/firefox.yml
-- include: apps/flash_player.yml
+# - include: apps/flash_player.yml
 - include: apps/sublime2.yml
 - include: apps/textmate.yml
 - include: apps/textwrangler.yml
