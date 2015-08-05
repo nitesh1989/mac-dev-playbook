@@ -17,8 +17,8 @@
     - name: Install cask dependencies (Java, Xquartz)
       homebrew_cask: name={{item}}
       with_items:
-        - Xquartz
-        - Java
+        - xquartz
+        - java
      
 
     # Blast won't build with gcc-4.9 OR clang, lovely. I don't want to tap homebrew/versions
