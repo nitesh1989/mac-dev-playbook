@@ -81,6 +81,7 @@
         - quake
         - snpeff
         - hotspot
+        - sratoolkit
         # From homebrew/python
         - numpy
         - scipy
