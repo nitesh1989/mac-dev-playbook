@@ -19,6 +19,8 @@
         - patsy
         - statsmodels
         - macs2
+        - bokeh
+        - ggplot
 
     # - pip: state=present name="PyX==0.12"
 
