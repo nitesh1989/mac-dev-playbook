@@ -4,25 +4,29 @@ Playbook for configuring Johns Hopkins CMDB laptops, based on https://github.com
 
 ## Mac Applications installed
 
+(The following are installed using homebrew cask)
+
 - Dropbox
 - Firefox
-- Flash Player
-- Java 7
-- Sublime Text 2
+- Java
+- [Sublime Text](http://sublimetext.com)
 - TextMate
 - Text Wrangler
 - MacTeX
-- R
-- RStudio
+- [RStudio](http://rstudio.com)
+- [Atom](https://atom.io/)
+- Google Chrome
 
 ## Applications installed from Homebrew
 
-- gcc-4.8 (needed to compile blast)
 - git
 - wget
 - numpy
 - scipy
 - matplotlib
+ 
+From homebrew/science
+
 - blast
 - samtools
 - bamtools
@@ -47,6 +51,32 @@ Playbook for configuring Johns Hopkins CMDB laptops, based on https://github.com
 - meme
 - quast
 - lastz
+- abyss
+- igraph
+- picard-tools
+- trinity
+- velvet
+- ray
+- augustus
+- spades
+- soapdenovo
+- cegma
+- glimmerhmm
+- gmap-gsnap
+- blasr
+- kraken
+- plink
+- quake
+- snpeff
+- hotspot
+- sratoolkit
+
+From homebrew/python
+
+- numpy
+- scipy
+- matplotlib
+- pillow
 
 ## Installed using Python's pip
 
