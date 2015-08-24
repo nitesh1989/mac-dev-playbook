@@ -14,7 +14,7 @@ sudo pip install paramiko PyYAML jinja2 httplib2
 sudo pip install ansible
 
 # Get the playbook
-git clone https://github.com/jxtx/mac-dev-playbook.git
+git clone https://github.com/nitesh1989/mac-dev-playbook.git
 
 # Run the playbook
 cd mac-dev-playbook

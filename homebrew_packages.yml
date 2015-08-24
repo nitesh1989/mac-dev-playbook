@@ -13,22 +13,22 @@
 
     - name: Install 'brew cask' command (and force brew update)
       homebrew: name=brew-cask state=latest update_homebrew=yes
-      
+
     - name: Install cask dependencies (Java, Xquartz)
       homebrew_cask: name={{item}}
       with_items:
         - xquartz
         - java
-     
+
 
     # Blast won't build with gcc-4.9 OR clang, lovely. I don't want to tap homebrew/versions
     ## - name: Install GCC 4.8 from homebrew/versions
     ##   shell: brew install homebrew/versions/gcc48 creates=/usr/local/bin/gcc-4.8
 
     - name: Install packages with homebrew
-      homebrew: name={{item}} state=latest 
+      homebrew: name={{item}} state=latest
       with_items:
-        - gcc 
+        - gcc
         - git
         - wget
         - mosh
@@ -36,71 +36,74 @@
         - ack
         - mercurial
         - vim
-        # From homebrew/science
-        - blast
-        - blat
-        - samtools
-        - bamtools
-        - bedtools
-        - bedops
-        - bcftools
-        - vcftools
-        - htslib
-        - bwa
-        - bowtie
-        - bowtie2
-        - tophat
-        - cufflinks
-        - mummer
-        - clustal-w
-        - clustal-omega
-        - fasta
-        - fastqc
-        - hmmer
-        - igv
-        - igvtools
-        - meme
-        - quast
-        - lastz
-        - abyss
-        - igraph
-        - picard-tools
-        - trinity
-        - velvet
-        - ray
-        - augustus
-        - spades
-        - soapdenovo
-        - cegma
-        # - glimmer3
-        - glimmerhmm
-        - gmap-gsnap
-        - blasr
-        - kraken
-        - plink
-        - quake
-        - snpeff
-        - hotspot
-        - sratoolkit
         # From homebrew/python
         - numpy
         - scipy
         - matplotlib
         - pillow
-        
+        # From homebrew/science
+        # - blast
+        # - blat
+        # - samtools
+        # - bamtools
+        # - bedtools
+        # - bedops
+        # - bcftools
+        # - vcftools
+        # - htslib
+        # - bwa
+        # - bowtie
+        # - bowtie2
+        # - tophat
+        # - cufflinks
+        # - mummer
+        # - clustal-w
+        # - clustal-omega
+        # - fasta
+        # - fastqc
+        # - hmmer
+        # - igv
+        # - igvtools
+        # - meme
+        # - quast
+        # - lastz
+        # - abyss
+        # - igraph
+        # - picard-tools
+        # - trinity
+        # - velvet
+        # - ray
+        # - augustus
+        # - spades
+        # - soapdenovo
+        # - cegma
+        # # - glimmer3
+        # - glimmerhmm
+        # - gmap-gsnap
+        # - blasr
+        # - kraken
+        # - plink
+        # - quake
+        # - snpeff
+        # - hotspot
+        # - sratoolkit
+
+
     - name: Install packages with homebrew cask
-      homebrew_cask: name={{item}} state=present 
+      homebrew_cask: name={{item}} state=present
       with_items:
         - font-dejavu-sans
         - dropbox
-        - firefox
-        - sublime-text
-        - textmate
-        - textwrangler
         - mactex
         - rstudio
-        - atom
+        - google-drive
+        - google-hangouts
+        - github-desktop
         - google-chrome
-        
+        - sublime-text
+        - skype
+        # - textmate
+        # - textwrangler
+        # - atom
 
 

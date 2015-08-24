@@ -1,30 +1,65 @@
 # Mac Development Ansible Playbook
 
-Playbook for configuring Johns Hopkins CMDB laptops, based on https://github.com/i11/mac-dev-playbook
+Playbook for configuring Developer laptops, based on https://github.com/i11/mac-dev-playbook
+
+Run using:
+
+```sh bootstrap.sh```
 
 ## Mac Applications installed
 
 (The following are installed using homebrew cask)
 
 - Dropbox
-- Firefox
 - Java
 - [Sublime Text](http://sublimetext.com)
-- TextMate
-- Text Wrangler
+- Google hangouts
+- Google Drive
 - MacTeX
 - [RStudio](http://rstudio.com)
-- [Atom](https://atom.io/)
+- Github desktop
 - Google Chrome
+- Skype
 
 ## Applications installed from Homebrew
 
 - git
+- ack
+- mercurial
+- tmux
+- vim
 - wget
 - numpy
 - scipy
 - matplotlib
- 
+
+From homebrew/python
+
+- numpy
+- scipy
+- matplotlib
+- pillow
+
+
+## Installed using Python's pip
+
+- patsy
+- statsmodels
+- cython
+- ipython
+- sympy
+- pandas
+- pymc
+- simpy
+- scikit-image
+- scikit-learn
+- PyX
+- macs2
+
+# Packages not installed
+
+To install these packages you have to uncomment from lines 45 -- 89 in ```homebrew_packages.yml```
+
 From homebrew/science
 
 - blast
@@ -70,26 +105,3 @@ From homebrew/science
 - snpeff
 - hotspot
 - sratoolkit
-
-From homebrew/python
-
-- numpy
-- scipy
-- matplotlib
-- pillow
-
-## Installed using Python's pip
-
-- patsy
-- statsmodels
-- cython
-- ipython
-- sympy
-- pandas
-- pymc
-- simpy
-- scikit-image
-- scikit-learn
-- PyX
-- macs2
-
